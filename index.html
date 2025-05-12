@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HiveFest Style Image Generator">
+    <title>HiveFest Image Generator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HiveFest<span class="super">10</span> Image Generator</h1>
+        <div class="upload-section">
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-text">Drop image here or click to upload</div>
+                <label for="imageUpload" class="upload-button">
+                    Select Image
+                    <input type="file" id="imageUpload" accept="image/*">
+                </label>
+                <div class="drop-zone-subtext">You can also paste an image using Ctrl+V</div>
+            </div>
+            <p class="file-name" id="fileName">No file selected</p>
+        </div>
+        <div id="imagePreviewContainer">
+            <div id="cropperContainer" style="display:none;">
+                <div class="cropper-wrapper">
+                    <img id="cropperImage" src="" alt="Image to crop">
+                </div>
+                <button id="cropDoneButton" class="action-button">Finish Cropping</button>
+            </div>
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="display:none;">
+            <canvas id="canvas" style="display:none;"></canvas>
+            <div id="downloadOptions" style="display:none;">
+                <button id="downloadButton" class="action-button">Download Image</button>
+                <button id="copyButton" class="action-button">Copy to Clipboard</button>
+            </div>
+        </div>
+        <div id="frameSelection">
+            <h2>Choose a frame:</h2>
+            <div class="frames-grid">
+                <img src="https://i.imgur.com/bXwurtl.png" alt="Leaves Frame" class="frame" id="frame1" crossorigin="anonymous">
+                <img src="https://i.imgur.com/d7Sjfu4.png" alt="Leaves Frame" class="frame" id="frame8" crossorigin="anonymous">
+                <img src="https://i.imgur.com/zCJFZyx.png" alt="Salam Dari Kuala Lumpur Gradient" class="frame" id="frame6" crossorigin="anonymous">
+                <img src="https://i.imgur.com/stiQWvv.png" alt="Leaves Frame Logo" class="frame" id="frame7" crossorigin="anonymous">
+                <img src="https://i.imgur.com/ZcUVdzf.png" alt="HF10-1" class="frame" id="frame2" crossorigin="anonymous">
+                <img src="https://i.imgur.com/xyvSEAk.png" alt="HF10-2" class="frame" id="frame3" crossorigin="anonymous">
+                <img src="https://i.imgur.com/JbEjpVk.png" alt="HF10-1_alt" class="frame" id="frame4" crossorigin="anonymous">
+                <img src="https://i.imgur.com/9z5H35i.png" alt="HF10-2_alt" class="frame" id="frame5" crossorigin="anonymous">
+            </div>
+        </div>
+        <button id="generateButton" class="action-button">Generate HiveFest Style</button>
+        
+        <footer class="footer">
+            <h3>Created by @louis88 - Hive Blockchain Witness</h3>
+            <p>Support my work by voting for me as a witness!</p>
+            <p><strong>Hive Witness:</strong> <a href="https://vote.hive.uno/@louis.witness" target="_blank">Vote using Hive Keychain</a></p>
+            <p><strong>Hive-Engine Witness:</strong> Vote using <a href="https://primersion.com/he-witnesses" target="_blank">Primersion Tool</a> - Search for "louis.witness"</p>
+            <p><strong>SPS-Validator:</strong> Vote using <a href="https://thespsdao.github.io/SPS-Validator/validator-nodes?node=louis.sps" target="_blank">for <strong>louis.sps</strong></a></p>
+            <p><strong>HIVE:Virtual Smart Chain (VSC) - Witness: <a href="https://vsc.techcoderx.com/address/hive:louis.vsc/witness" target="_blank"> Vote for <strong>louis.vsc</strong></a> </p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
