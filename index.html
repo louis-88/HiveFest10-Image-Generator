@@ -10,46 +10,100 @@
 </head>
 <body>
     <div class="container">
-        <h1>HiveFest<span class="super">10</span> Image Generator</h1>
-        <div class="upload-section">
-            <div class="drop-zone" id="dropZone">
-                <div class="drop-zone-text">Drop image here or click to upload</div>
-                <label for="imageUpload" class="upload-button">
-                    Select Image
-                    <input type="file" id="imageUpload" accept="image/*">
-                </label>
-                <div class="drop-zone-subtext">You can also paste an image using Ctrl+V</div>
-            </div>
-            <p class="file-name" id="fileName">No file selected</p>
-        </div>
-        <div id="imagePreviewContainer">
-            <div id="cropperContainer" style="display:none;">
-                <div class="cropper-wrapper">
-                    <img id="cropperImage" src="" alt="Image to crop">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" id="navHiveFest10" class="active">HiveFest10</a></li>
+                <li><a href="#" id="navInstaxHF10">Polaroid Instax HF10</a></li>
+            </ul>
+        </nav>
+        <h1 id="mainTitle">HiveFest<span class="super">10</span> Image Generator</h1>
+        <div id="hivefest10Section">
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-zone-text">Drop image here or click to upload</div>
+                    <label for="imageUpload" class="upload-button">
+                        Select Image
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </label>
+                    <div class="drop-zone-subtext">You can also paste an image using Ctrl+V</div>
                 </div>
-                <button id="cropDoneButton" class="action-button">Finish Cropping</button>
+                <p class="file-name" id="fileName">No file selected</p>
             </div>
-            <img id="uploadedImage" src="" alt="Uploaded Image" style="display:none;">
-            <canvas id="canvas" style="display:none;"></canvas>
-            <div id="downloadOptions" style="display:none;">
-                <button id="downloadButton" class="action-button">Download Image</button>
-                <button id="copyButton" class="action-button">Copy to Clipboard</button>
+            <div id="imagePreviewContainer">
+                <div id="cropperContainer" style="display:none;">
+                    <div class="cropper-wrapper">
+                        <img id="cropperImage" src="" alt="Image to crop">
+                    </div>
+                    <button id="cropDoneButton" class="action-button">Finish Cropping</button>
+                </div>
+                <img id="uploadedImage" src="" alt="Uploaded Image" style="display:none;">
+                <canvas id="canvas" style="display:none;"></canvas>
+                <div id="downloadOptions" style="display:none;">
+                    <button id="downloadButton" class="action-button">Download Image</button>
+                    <button id="copyButton" class="action-button">Copy to Clipboard</button>
+                </div>
             </div>
+            <div id="frameSelection">
+                <h2>Choose a frame:</h2>
+                <div class="frames-grid">
+                    <img src="https://i.imgur.com/bXwurtl.png" alt="Leaves Frame" class="frame" id="frame1" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/d7Sjfu4.png" alt="Leaves Frame" class="frame" id="frame8" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/zCJFZyx.png" alt="Salam Dari Kuala Lumpur Gradient" class="frame" id="frame6" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/stiQWvv.png" alt="Leaves Frame Logo" class="frame" id="frame7" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/ZcUVdzf.png" alt="HF10-1" class="frame" id="frame2" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/xyvSEAk.png" alt="HF10-2" class="frame" id="frame3" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/JbEjpVk.png" alt="HF10-1_alt" class="frame" id="frame4" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/9z5H35i.png" alt="HF10-2_alt" class="frame" id="frame5" crossorigin="anonymous">
+                </div>
+            </div>
+            <button id="generateButton" class="action-button">Generate HiveFest Style</button>
         </div>
-        <div id="frameSelection">
-            <h2>Choose a frame:</h2>
-            <div class="frames-grid">
-                <img src="https://i.imgur.com/bXwurtl.png" alt="Leaves Frame" class="frame" id="frame1" crossorigin="anonymous">
-                <img src="https://i.imgur.com/d7Sjfu4.png" alt="Leaves Frame" class="frame" id="frame8" crossorigin="anonymous">
-                <img src="https://i.imgur.com/zCJFZyx.png" alt="Salam Dari Kuala Lumpur Gradient" class="frame" id="frame6" crossorigin="anonymous">
-                <img src="https://i.imgur.com/stiQWvv.png" alt="Leaves Frame Logo" class="frame" id="frame7" crossorigin="anonymous">
-                <img src="https://i.imgur.com/ZcUVdzf.png" alt="HF10-1" class="frame" id="frame2" crossorigin="anonymous">
-                <img src="https://i.imgur.com/xyvSEAk.png" alt="HF10-2" class="frame" id="frame3" crossorigin="anonymous">
-                <img src="https://i.imgur.com/JbEjpVk.png" alt="HF10-1_alt" class="frame" id="frame4" crossorigin="anonymous">
-                <img src="https://i.imgur.com/9z5H35i.png" alt="HF10-2_alt" class="frame" id="frame5" crossorigin="anonymous">
+        <div id="instaxhf10Section" style="display:none;">
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZoneInstax">
+                    <div class="drop-zone-text">Drop image here or click to upload</div>
+                    <label for="imageUploadInstax" class="upload-button">
+                        Select Image
+                        <input type="file" id="imageUploadInstax" accept="image/*">
+                    </label>
+                    <div class="drop-zone-subtext">You can also paste an image using Ctrl+V</div>
+                </div>
+                <p class="file-name" id="fileNameInstax">No image selected</p>
             </div>
+            <div id="imagePreviewContainerInstax">
+                <div id="cropperContainerInstax" style="display:none;">
+                    <div class="cropper-wrapper">
+                        <img id="cropperImageInstax" src="" alt="Crop Image">
+                    </div>
+                    <button id="cropDoneButtonInstax" class="action-button">Finish Cropping</button>
+                </div>
+                <img id="uploadedImageInstax" src="" alt="Uploaded Image" style="display:none;">
+                <canvas id="canvasInstax" style="display:none;"></canvas>
+                <div id="downloadOptionsInstax" style="display:none;">
+                    <button id="downloadButtonInstax" class="action-button">Download Image</button>
+                    <button id="copyButtonInstax" class="action-button">Copy to Clipboard</button>
+                </div>
+            </div>
+            <div id="frameSelectionInstax">
+                <h2>Select Instax Mini Frame:</h2>
+                <div class="frames-grid">
+                    <img src="https://i.imgur.com/RGaz9Cr.png" alt="Instax Mini HF10" class="frame" id="frameInstax1" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/rRtLUtf.png" alt="Instax Mini HF10" class="frame" id="frameInstax2" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/pMVAC32.png" alt="Instax Mini HF10" class="frame" id="frameInstax3" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/hIB8Fjx.png" alt="Instax Mini HF10" class="frame" id="frameInstax4" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/ZlFVX6V.png" alt="Instax Mini HF10" class="frame" id="frameInstax5" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/lyOohps.png" alt="Instax Mini HF10" class="frame" id="frameInstax6" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/JlHVQpR.png" alt="Instax Mini HF10" class="frame" id="frameInstax7" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/FdVwcbu.png" alt="Instax Mini HF10" class="frame" id="frameInstax8" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/HLqeotG.png" alt="Instax Mini HF10" class="frame" id="frameInstax12" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/9FpVTXs.png" alt="Instax Mini HF10" class="frame" id="frameInstax9" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/Eq1GWIY.png" alt="Instax Mini HF10" class="frame" id="frameInstax10" crossorigin="anonymous">
+                    <img src="https://i.imgur.com/KzUVRyh.png" alt="Instax Mini HF10" class="frame" id="frameInstax11" crossorigin="anonymous">
+
+                </div>
+            </div>
+            <button id="generateButtonInstax" class="action-button">Generate Instax HF10 Image</button>
         </div>
-        <button id="generateButton" class="action-button">Generate HiveFest Style</button>
         
         <footer class="footer">
             <h3>Created by @louis88 - Hive Blockchain Witness</h3>
