@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navHiveFest10.classList.remove('active');
         hivefest10Section.style.display = 'none';
         instaxhf10Section.style.display = '';
-        mainTitle.innerHTML = 'Polaroid Instax HF10 Overlay';
+        mainTitle.innerHTML = 'Polaroid Instax HiveFest<span class="super">10</span> Overlay <br> <sup>Powered by Worldmappin.com</sup>';
     });
 
     // HiveFest10 logic
